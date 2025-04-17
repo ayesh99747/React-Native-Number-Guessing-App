@@ -12,7 +12,7 @@ export default function NumberContainer({children}) {
 const styles = StyleSheet.create({
     numberContainer: {
         fontSize: 28,
-        fontWeight: "bold",
+        fontFamily: 'open-sans-bold',
         color: "#fff",
         padding: 24,
         borderWidth: 4,
