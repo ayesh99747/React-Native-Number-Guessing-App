@@ -31,6 +31,12 @@ export default function GameScreen({userNumber, onGameOver}) {
         }
     }, [currentGuess, userNumber, onGameOver]);
 
+    // This effect is used to set the min and max boundaries when the component initialises.
+    useEffect(() => {
+        minBoundary = 1;
+        maxBoundary = 100;
+    }, []);
+
     function nextGuessHandler(direction) {
         if ((direction === "lower" && currentGuess < userNumber) || (direction === "higher" && currentGuess > userNumber)) {
             Alert.alert("Don't lie!", "You know that this is wrong...", [{text: "Sorry!", style: "cancel"}]);
