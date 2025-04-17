@@ -5,6 +5,7 @@ import {useEffect, useState} from "react";
 import NumberContainer from "../components/game/NumberContainer";
 import Card from "../components/ui/Card";
 import InstructionText from "../components/ui/InstructionText";
+import {Ionicons} from "@expo/vector-icons";
 
 function generateRandomNumberBetween(min, max, exclude) {
     const rndNumber = Math.floor(Math.random() * (max - min)) + min;
@@ -54,10 +55,15 @@ export default function GameScreen({userNumber, onGameOver}) {
                 <InstructionText style={styles.instructionText}>Higher or Lower</InstructionText>
                 <View style={styles.buttonContainer}>
                     <View style={styles.button}>
-                        <PrimaryButton onPress={nextGuessHandler.bind(this, "higher")}>+</PrimaryButton>
+                        <PrimaryButton onPress={nextGuessHandler.bind(this, "higher")}>
+                            <Ionicons name="add-sharp" size={24} color="white"/>
+                        </PrimaryButton>
                     </View>
                     <View style={styles.button}>
-                        <PrimaryButton onPress={nextGuessHandler.bind(this, "lower")}>-</PrimaryButton>
+                        <PrimaryButton onPress={nextGuessHandler.bind(this, "lower")}>
+                            <Ionicons name="remove-sharp" size={24} color="white"/>
+
+                        </PrimaryButton>
                     </View>
                 </View>
                 <Text>Log Rounds</Text>
