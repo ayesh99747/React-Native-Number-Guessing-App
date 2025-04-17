@@ -38,3 +38,12 @@ yarn-error.*
 # IDEs
 *.idea/
 *.vscode/
+
+# Android Studio
+*.iml
+*.hprof
+*.ipr
+*.iws
+
+# Node
+package-lock.json
